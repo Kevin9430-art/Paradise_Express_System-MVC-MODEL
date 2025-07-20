@@ -97,18 +97,18 @@ public class PanelClientes extends javax.swing.JPanel {
         setForeground(new java.awt.Color(0, 255, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnLimpiar.setBackground(new java.awt.Color(0, 0, 0));
         btnLimpiar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(102, 255, 0));
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 190, 42));
+        add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 190, 42));
 
-        Tabla.setBackground(new java.awt.Color(51, 51, 51));
         Tabla.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
-        Tabla.setForeground(new java.awt.Color(255, 255, 255));
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -132,18 +132,22 @@ public class PanelClientes extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(Tabla);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 720, 210));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 720, 210));
 
+        btnmodificar.setBackground(new java.awt.Color(0, 0, 0));
         btnmodificar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnmodificar.setForeground(new java.awt.Color(102, 255, 0));
         btnmodificar.setText("Modificar");
         btnmodificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnmodificarActionPerformed(evt);
             }
         });
-        add(btnmodificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 190, 39));
+        add(btnmodificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 190, 39));
 
+        btnagregar.setBackground(new java.awt.Color(0, 0, 0));
         btnagregar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnagregar.setForeground(new java.awt.Color(102, 255, 0));
         btnagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/icon user.png"))); // NOI18N
         btnagregar.setText("Agregar");
         btnagregar.addActionListener(new java.awt.event.ActionListener() {
@@ -151,16 +155,18 @@ public class PanelClientes extends javax.swing.JPanel {
                 btnagregarActionPerformed(evt);
             }
         });
-        add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 190, 37));
+        add(btnagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 190, 37));
 
+        btnliminar.setBackground(new java.awt.Color(0, 0, 0));
         btnliminar.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnliminar.setForeground(new java.awt.Color(51, 255, 0));
         btnliminar.setText("Eliminar");
         btnliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnliminarActionPerformed(evt);
             }
         });
-        add(btnliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 140, 190, 37));
+        add(btnliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 190, 37));
 
         txtbuscarnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,7 +257,9 @@ public class PanelClientes extends javax.swing.JPanel {
         });
         add(txtCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 200, -1));
 
+        btnBuscar.setBackground(new java.awt.Color(0, 0, 0));
         btnBuscar.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(102, 255, 0));
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/lupa (2).png"))); // NOI18N
         btnBuscar.setText("Criterio de Busqueda");
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -272,7 +280,7 @@ public class PanelClientes extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Imagen de WhatsApp 2025-07-18 a las 16.17.42_7cd80df7.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 960, 520));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 960, 520));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
