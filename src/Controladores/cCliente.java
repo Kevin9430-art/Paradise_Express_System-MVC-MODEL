@@ -77,11 +77,14 @@ public class cCliente {
         ArrayList<Cliente> resultado = new ArrayList<>();
         texto = texto.toLowerCase();
 
-        for (int i = 0; i < listaClientes.size(); i++) {
-            Cliente c = listaClientes.get(i);
+        for (Cliente c : listaClientes) {
             if (c.cedula.toLowerCase().contains(texto)
                     || c.nombre.toLowerCase().contains(texto)
-                    || c.ciudad.toLowerCase().contains(texto)) {
+                    || c.apellido.toLowerCase().contains(texto)
+                    || c.celular.toLowerCase().contains(texto)
+                    || c.direccion.toLowerCase().contains(texto)
+                    || c.ciudad.toLowerCase().contains(texto)
+                    || c.email.toLowerCase().contains(texto)) {
                 resultado.add(c);
             }
         }

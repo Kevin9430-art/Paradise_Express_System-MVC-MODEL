@@ -65,11 +65,13 @@ public class panelGerente extends javax.swing.JPanel {
         panelmenu.setPreferredSize(new java.awt.Dimension(200, 200));
         panelmenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/usuario (2) (1) (1).png"))); // NOI18N
-        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        btnusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Boton.png"))); // NOI18N
-        btnusuario.setText("Usuario ");
+        btnusuario.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnusuario.setForeground(new java.awt.Color(255, 255, 255));
+        btnusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
+        btnusuario.setText("USUARIO");
         btnusuario.setBorder(null);
         btnusuario.setContentAreaFilled(false);
         btnusuario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -83,15 +85,17 @@ public class panelGerente extends javax.swing.JPanel {
                 btnusuarioActionPerformed(evt);
             }
         });
-        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 130, -1));
+        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 130, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/clasificacion (1).png"))); // NOI18N
-        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 130, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 130, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/cerrar-sesion (2).png"))); // NOI18N
-        panelmenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        panelmenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
-        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Boton.png"))); // NOI18N
+        btnsalir.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnsalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
         btnsalir.setText("Salir ");
         btnsalir.setBorder(null);
         btnsalir.setContentAreaFilled(false);
@@ -103,11 +107,13 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/vendedor (2).png"))); // NOI18N
-        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 90, 90));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, 90));
 
-        btncliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Boton.png"))); // NOI18N
-        btncliente.setText("Clientes");
+        btncliente.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btncliente.setForeground(new java.awt.Color(255, 255, 255));
+        btncliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
+        btncliente.setText("CLIENTES");
         btncliente.setBorder(null);
         btncliente.setContentAreaFilled(false);
         btncliente.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -118,11 +124,13 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/productos-de-limpieza (2).png"))); // NOI18N
-        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 90, 90));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 90, 90));
 
-        btnvendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Boton.png"))); // NOI18N
-        btnvendedor.setText("Vendedor");
+        btnvendedor.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnvendedor.setForeground(new java.awt.Color(255, 255, 255));
+        btnvendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
+        btnvendedor.setText("VENDEDOR");
         btnvendedor.setBorder(null);
         btnvendedor.setContentAreaFilled(false);
         btnvendedor.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -133,7 +141,9 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btnvendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 150, -1));
 
-        btnproductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/Boton.png"))); // NOI18N
+        btnproductos.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnproductos.setForeground(new java.awt.Color(255, 255, 255));
+        btnproductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
         btnproductos.setText("Productos");
         btnproductos.setBorder(null);
         btnproductos.setContentAreaFilled(false);

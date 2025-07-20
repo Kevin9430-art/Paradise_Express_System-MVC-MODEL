@@ -1,12 +1,12 @@
 /dist/
-# === Archivos generados por NetBeans ===
-nbproject/private/
-build/
-dist/
-*.class
+ === Archivos generados por NetBeans ===
+#nbproject/private/
+#build/
+#dist/
+#*.class
 
 # === Archivos temporales del sistema ===
-*.log
+3*.log
 *.tmp
 *.bak
 *.swp
