@@ -99,6 +99,11 @@ public class panelVendedor extends javax.swing.JPanel {
                 jTextField1ActionPerformed(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField1KeyReleased(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -303,8 +308,6 @@ public class panelVendedor extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-
-        jButton2.getAccessibleContext().setAccessibleName("Agregar");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
@@ -453,6 +456,17 @@ public class panelVendedor extends javax.swing.JPanel {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // TODO add your handling code here:
+        try {
+        String texto = jTextField1.getText().trim();
+        cVendedor resultado = cVendedor.buscar_nombre(texto);
+        jTable1.setModel(resultado.getTabla());
+        } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error al buscar vendedores: " + e.getMessage());
+        }
+    }//GEN-LAST:event_jTextField1KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

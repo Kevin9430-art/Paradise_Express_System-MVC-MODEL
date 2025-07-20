@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class cProductos {
 
-    private ArrayList<Productos> listaProductos = new ArrayList();// coleccion o arreglo dinamico de objetos.
+    public ArrayList<Productos> listaProductos = new ArrayList();// coleccion o arreglo dinamico de objetos.
 //devuelve la cantidad de objetos de la lista
 
     public int Cantidad() {
@@ -109,6 +109,7 @@ public class cProductos {
             }
         }
         return p;
+        
     }
 
     public cProductos buscar_marca(String marca_prod) throws IOException {

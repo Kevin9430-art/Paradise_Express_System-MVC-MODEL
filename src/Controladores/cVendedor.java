@@ -136,11 +136,9 @@ public class cVendedor {
 
     public cVendedor buscar_nombre(String nombre) throws IOException {
         cVendedor resultado = new cVendedor();
-        nombre = nombre.toLowerCase();
-
         for (int i = 0; i < Cantidad(); i++) {
             Vendedor v = getVendedor(i);
-            if (v.nombrev.toLowerCase().contains(nombre)) {
+            if (v.nombrev.toLowerCase().contains(nombre.toLowerCase())) {
                 resultado.nuevo(v);
             }
         }
