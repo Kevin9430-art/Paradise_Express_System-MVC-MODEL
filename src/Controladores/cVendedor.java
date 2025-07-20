@@ -132,6 +132,34 @@ public class cVendedor {
         }
         return result;
     }
+// Buscar por nombre (parcial o completo)
+
+    public cVendedor buscar_nombre(String nombre) throws IOException {
+        cVendedor resultado = new cVendedor();
+        nombre = nombre.toLowerCase();
+
+        for (int i = 0; i < Cantidad(); i++) {
+            Vendedor v = getVendedor(i);
+            if (v.nombrev.toLowerCase().contains(nombre)) {
+                resultado.nuevo(v);
+            }
+        }
+        return resultado;
+    }
+
+// Buscar por cédula (parcial o completa)
+    public cVendedor buscar_cedula(String cedula) throws IOException {
+        cVendedor resultado = new cVendedor();
+        cedula = cedula.toLowerCase();
+
+        for (int i = 0; i < Cantidad(); i++) {
+            Vendedor v = getVendedor(i);
+            if (v.cedulav.toLowerCase().contains(cedula)) {
+                resultado.nuevo(v);
+            }
+        }
+        return resultado;
+    }
 
     public void guardar() throws IOException {
         FileWriter file;
