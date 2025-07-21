@@ -144,6 +144,25 @@ public class cVendedor {
         }
         return resultado;
     }
+public String obtenerVendedorPorNombre(String nombreBuscado, String apellidoBuscado) {
+    String nombreCompleto = "";
+    try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+        String linea;
+        br.readLine(); // Saltar encabezado
+        while ((linea = br.readLine()) != null) {
+            String[] datos = linea.split(";");
+            String nombre = datos[1].trim();
+            String apellido = datos[2].trim();
+            if (nombre.equalsIgnoreCase(nombreBuscado) && apellido.equalsIgnoreCase(apellidoBuscado)) {
+                nombreCompleto = nombre + " " + apellido;
+                break;
+            }
+        }
+    } catch (IOException e) {
+        System.out.println("Error al leer archivo de vendedores: " + e.getMessage());
+    }
+    return nombreCompleto;
+}
 
 // Buscar por cédula (parcial o completa)
     public cVendedor buscar_cedula(String cedula) throws IOException {

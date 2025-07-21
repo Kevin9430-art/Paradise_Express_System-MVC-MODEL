@@ -3,13 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Controladores/cFacturas.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Vistas/panelGerente.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Vistas/PanelClientes.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Controladores/cCliente.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Modelos/Cliente.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Vistas/frmPrincipal.java</file>
-            <file>file:/C:/Users/kevin/Desktop/nuevo%20proyecto%20paradise/src/Vistas/panelVendedor.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cVendedor.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Modelos/Login.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Modelos/Factura.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cLogin.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cProductos.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Vistas/Panelproductos.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Modelos/Productos.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Modelos/DetalleFactura.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Vistas/panelGerente.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Vistas/panelVendedor.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cCliente.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cFacturas.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Vistas/frmPrincipal.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Controladores/cDetalleFactura.java</file>
+            <file>file:/C:/Users/mjair/OneDrive/Desktop/PROYECTOS/NetbeansPro/Paradise_Express_System-MVC-MODEL/src/Vistas/PanelClientes.java</file>
         </group>
     </open-files>
 </project-private>

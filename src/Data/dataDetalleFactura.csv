@@ -1,0 +1,14 @@
+﻿
+1;PROD001;Bolos de fabrica;3;1.0;3.0
+1;PROD002;Detergente;3;1.0;3.0
+1;PROD003;Suavizante de ropa;3;8.0;24.0
+2;PROD003;Suavizante de ropa;5;8.0;40.0
+3;PROD003;Suavizante de ropa;4;8.0;32.0
+3;PROD002;Detergente;5;1.0;5.0
+3;PROD005;cloro23;4;5.0;20.0
+4;PROD004;Cloro;3;5.0;15.0
+6;PROD003;Suavizante de ropa;6;8.0;48.0
+7;PROD003;Suavizante de ropa;3;8.0;24.0
+7;PROD004;Cloro;4;5.0;20.0
+10;PROD003;Suavizante de ropa;4;8.0;32.0
+10;PROD001;Bolos de fabrica;3;1.0;3.0

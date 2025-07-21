@@ -221,4 +221,56 @@ public class cCliente {
         }
     }
 
+    public String obtenerClientePorCedula(String cedulaBuscada) {
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String linea;
+            br.readLine(); // Saltar encabezado
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos[0].trim().equals(cedulaBuscada)) {
+                    return datos[1] + " " + datos[2]; // nombre + apellido
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al leer archivo de clientes: " + e.getMessage());
+        }
+        return "";
+    }
+
+    public ArrayList<String> obtenerClientesFormatoCombo() {
+        ArrayList<String> lista = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String linea;
+            br.readLine(); // Saltar encabezado
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos.length >= 3) {
+                    String cedula = datos[0].trim();
+                    String nombre = datos[1].trim();
+                    String apellido = datos[2].trim();
+                    String item = cedula + " - " + nombre + " " + apellido;
+                    lista.add(item);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al cargar clientes para el combo: " + e.getMessage());
+        }
+        return lista;
+    }
+    public String obtenerNombreClientePorCedula(String cedula) {
+    try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+        String linea;
+        br.readLine(); // Saltar encabezado si existe
+        while ((linea = br.readLine()) != null) {
+            String[] datos = linea.split(";");
+            if (datos.length >= 3 && datos[0].trim().equals(cedula)) {
+                return datos[1].trim() + " " + datos[2].trim();
+            }
+        }
+    } catch (IOException e) {
+        System.err.println("Error al buscar cliente: " + e.getMessage());
+    }
+    return "Desconocido";
+}
+
 }

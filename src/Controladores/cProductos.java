@@ -109,7 +109,7 @@ public class cProductos {
             }
         }
         return p;
-        
+
     }
 
     public cProductos buscar_marca(String marca_prod) throws IOException {
@@ -221,5 +221,23 @@ public class cProductos {
             System.out.print(e.getMessage());
             throw new RuntimeException("**Error al guardar datos** ");
         }
+    }
+
+    public ArrayList<String> obtenerProductosFormatoCombo() {
+        ArrayList<String> lista = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String linea;
+            br.readLine(); // Saltar encabezado
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos.length >= 2) {
+                    String Codigo = datos[1].trim();
+                    lista.add(Codigo);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al cargar productos para el combo: " + e.getMessage());
+        }
+        return lista;
     }
 }

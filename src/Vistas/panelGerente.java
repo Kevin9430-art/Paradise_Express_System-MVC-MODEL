@@ -17,6 +17,7 @@ public class panelGerente extends javax.swing.JPanel {
     private PanelClientes PanelClientes;
     private panelVendedor panelVendedor;
     private Panelproductos Panelproductos;
+    private panelFactura PanelFactura;
 
     /**
      * Creates new form panelGerente
@@ -29,6 +30,8 @@ public class panelGerente extends javax.swing.JPanel {
         panelcentral.add(panelVendedor, "vendedor");
         Panelproductos = new Panelproductos();                    // ← NUEVO
         panelcentral.add(Panelproductos, "productos");
+        PanelFactura = new panelFactura();
+        panelcentral.add(PanelFactura, "Facturacion");
     }
 
     /**
@@ -217,6 +220,12 @@ public class panelGerente extends javax.swing.JPanel {
     }//GEN-LAST:event_btnproductosActionPerformed
 
     private void btnfacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfacturaActionPerformed
+        CardLayout cl = (CardLayout) panelcentral.getLayout();
+        cl.show(panelcentral, "Facturacion");
+    }//GEN-LAST:event_btnfacturaActionPerformed
+
+    private void btnsalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalir1ActionPerformed
+        // TODO add your handling code here:
         int opcion = JOptionPane.showConfirmDialog(
                 this,
                 "¿Estás seguro de que deseas cerrar sesión?",
@@ -235,10 +244,6 @@ public class panelGerente extends javax.swing.JPanel {
             frmPrincipal login = new frmPrincipal();
             login.setVisible(true);
         }
-    }//GEN-LAST:event_btnfacturaActionPerformed
-
-    private void btnsalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalir1ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnsalir1ActionPerformed
 
 
