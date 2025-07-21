@@ -46,12 +46,13 @@ public class panelGerente extends javax.swing.JPanel {
         btnusuario = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        btnsalir = new javax.swing.JButton();
+        btnfactura = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         btncliente = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         btnvendedor = new javax.swing.JButton();
         btnproductos = new javax.swing.JButton();
+        btnsalir1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         panelcentral = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -66,7 +67,7 @@ public class panelGerente extends javax.swing.JPanel {
         panelmenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
-        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         btnusuario.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnusuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,30 +86,30 @@ public class panelGerente extends javax.swing.JPanel {
                 btnusuarioActionPerformed(evt);
             }
         });
-        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 130, -1));
+        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 150, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/man-and-woman-user-26904-removebg-preview.png"))); // NOI18N
-        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 130, -1));
+        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 130, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
         panelmenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
 
-        btnsalir.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
-        btnsalir.setForeground(new java.awt.Color(255, 255, 255));
-        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
-        btnsalir.setText("Salir ");
-        btnsalir.setBorder(null);
-        btnsalir.setContentAreaFilled(false);
-        btnsalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnsalir.addActionListener(new java.awt.event.ActionListener() {
+        btnfactura.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnfactura.setForeground(new java.awt.Color(255, 255, 255));
+        btnfactura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
+        btnfactura.setText("FACTURACION");
+        btnfactura.setBorder(null);
+        btnfactura.setContentAreaFilled(false);
+        btnfactura.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnfactura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsalirActionPerformed(evt);
+                btnfacturaActionPerformed(evt);
             }
         });
-        panelmenu.add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        panelmenu.add(btnfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/vendedor-removebg-preview.png"))); // NOI18N
-        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, 90));
+        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 90, 90));
 
         btncliente.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btncliente.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,10 +123,10 @@ public class panelGerente extends javax.swing.JPanel {
                 btnclienteActionPerformed(evt);
             }
         });
-        panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 160, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/productos.png"))); // NOI18N
-        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 110, 120));
+        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 110, 120));
 
         btnvendedor.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnvendedor.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,12 +140,12 @@ public class panelGerente extends javax.swing.JPanel {
                 btnvendedorActionPerformed(evt);
             }
         });
-        panelmenu.add(btnvendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 150, -1));
+        panelmenu.add(btnvendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 170, -1));
 
         btnproductos.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnproductos.setForeground(new java.awt.Color(255, 255, 255));
         btnproductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
-        btnproductos.setText("Productos");
+        btnproductos.setText("PRODUCTOS");
         btnproductos.setBorder(null);
         btnproductos.setContentAreaFilled(false);
         btnproductos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -153,7 +154,21 @@ public class panelGerente extends javax.swing.JPanel {
                 btnproductosActionPerformed(evt);
             }
         });
-        panelmenu.add(btnproductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+        panelmenu.add(btnproductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+
+        btnsalir1.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
+        btnsalir1.setForeground(new java.awt.Color(255, 255, 255));
+        btnsalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Recursos/steak_1852275.png"))); // NOI18N
+        btnsalir1.setText("Salir ");
+        btnsalir1.setBorder(null);
+        btnsalir1.setContentAreaFilled(false);
+        btnsalir1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnsalir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalir1ActionPerformed(evt);
+            }
+        });
+        panelmenu.add(btnsalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
         add(panelmenu, java.awt.BorderLayout.LINE_START);
 
@@ -197,7 +212,7 @@ public class panelGerente extends javax.swing.JPanel {
         cl.show(panelcentral, "productos");
     }//GEN-LAST:event_btnproductosActionPerformed
 
-    private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
+    private void btnfacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfacturaActionPerformed
         int opcion = JOptionPane.showConfirmDialog(
                 this,
                 "¿Estás seguro de que deseas cerrar sesión?",
@@ -216,13 +231,18 @@ public class panelGerente extends javax.swing.JPanel {
             frmPrincipal login = new frmPrincipal();
             login.setVisible(true);
         }
-    }//GEN-LAST:event_btnsalirActionPerformed
+    }//GEN-LAST:event_btnfacturaActionPerformed
+
+    private void btnsalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalir1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnsalir1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btncliente;
+    private javax.swing.JButton btnfactura;
     private javax.swing.JButton btnproductos;
-    private javax.swing.JButton btnsalir;
+    private javax.swing.JButton btnsalir1;
     private javax.swing.JButton btnusuario;
     private javax.swing.JButton btnvendedor;
     private javax.swing.JLabel jLabel1;
