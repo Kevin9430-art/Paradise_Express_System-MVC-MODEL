@@ -87,7 +87,7 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 130, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/man-and-woman-user-26904-removebg-preview.png"))); // NOI18N
         panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 130, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
@@ -107,7 +107,7 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/vendedor-removebg-preview.png"))); // NOI18N
         panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, 90));
 
         btncliente.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
@@ -124,8 +124,8 @@ public class panelGerente extends javax.swing.JPanel {
         });
         panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
-        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 90, 90));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/productos.png"))); // NOI18N
+        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 110, 120));
 
         btnvendedor.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnvendedor.setForeground(new java.awt.Color(255, 255, 255));

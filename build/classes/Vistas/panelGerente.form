@@ -90,7 +90,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Recursos/user_3237472 (1).png"/>
+              <Image iconType="3" name="/Recursos/man-and-woman-user-26904-removebg-preview.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -141,7 +141,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Recursos/user_3237472 (1).png"/>
+              <Image iconType="3" name="/Recursos/vendedor-removebg-preview.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -180,12 +180,12 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Recursos/user_3237472 (1).png"/>
+              <Image iconType="3" name="/Recursos/productos.png"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="20" y="290" width="90" height="90"/>
+              <AbsoluteConstraints x="10" y="280" width="110" height="120"/>
             </Constraint>
           </Constraints>
         </Component>

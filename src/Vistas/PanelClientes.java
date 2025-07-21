@@ -106,7 +106,7 @@ public class PanelClientes extends javax.swing.JPanel {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 190, 42));
+        add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 190, 40));
 
         Tabla.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
