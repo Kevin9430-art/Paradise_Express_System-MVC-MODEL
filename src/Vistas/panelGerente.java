@@ -42,6 +42,7 @@ public class panelGerente extends javax.swing.JPanel {
 
         jLabel5 = new javax.swing.JLabel();
         panelmenu = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnusuario = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -66,8 +67,11 @@ public class panelGerente extends javax.swing.JPanel {
         panelmenu.setPreferredSize(new java.awt.Dimension(200, 200));
         panelmenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/factura-removebg-preview (1).png"))); // NOI18N
+        panelmenu.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
-        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        panelmenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         btnusuario.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnusuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,13 +90,13 @@ public class panelGerente extends javax.swing.JPanel {
                 btnusuarioActionPerformed(evt);
             }
         });
-        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 150, -1));
+        panelmenu.add(btnusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/man-and-woman-user-26904-removebg-preview.png"))); // NOI18N
-        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 130, -1));
+        panelmenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 130, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/user_3237472 (1).png"))); // NOI18N
-        panelmenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
+        panelmenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
 
         btnfactura.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnfactura.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,10 +110,10 @@ public class panelGerente extends javax.swing.JPanel {
                 btnfacturaActionPerformed(evt);
             }
         });
-        panelmenu.add(btnfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        panelmenu.add(btnfactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/vendedor-removebg-preview.png"))); // NOI18N
-        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 90, 90));
+        panelmenu.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, 90));
 
         btncliente.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btncliente.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,10 +127,10 @@ public class panelGerente extends javax.swing.JPanel {
                 btnclienteActionPerformed(evt);
             }
         });
-        panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 160, -1));
+        panelmenu.add(btncliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 160, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/productos.png"))); // NOI18N
-        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 110, 120));
+        panelmenu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 110, 120));
 
         btnvendedor.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnvendedor.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,7 +144,7 @@ public class panelGerente extends javax.swing.JPanel {
                 btnvendedorActionPerformed(evt);
             }
         });
-        panelmenu.add(btnvendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 170, -1));
+        panelmenu.add(btnvendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 170, -1));
 
         btnproductos.setFont(new java.awt.Font("Consolas", 0, 18)); // NOI18N
         btnproductos.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,7 +172,7 @@ public class panelGerente extends javax.swing.JPanel {
                 btnsalir1ActionPerformed(evt);
             }
         });
-        panelmenu.add(btnsalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        panelmenu.add(btnsalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
         add(panelmenu, java.awt.BorderLayout.LINE_START);
 
@@ -253,6 +257,7 @@ public class panelGerente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel panelcentral;
     private javax.swing.JPanel panelmenu;
     // End of variables declaration//GEN-END:variables
