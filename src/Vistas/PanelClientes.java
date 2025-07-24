@@ -39,7 +39,7 @@ public class PanelClientes extends javax.swing.JPanel {
         DefaultTableModel modelo = (DefaultTableModel) Tabla.getModel();
         modelo.setRowCount(0);
         for (Cliente c : lista) {
-            Object[] fila = {c.cedula, c.nombre,c.apellido,c.celular,c.direccion,c.ciudad,c.email};
+            Object[] fila = {c.cedula, c.nombre, c.apellido, c.celular, c.direccion, c.ciudad, c.email};
             modelo.addRow(fila);
         }
     }
@@ -296,7 +296,7 @@ public class PanelClientes extends javax.swing.JPanel {
         String celular = txtCelular.getText().trim();
         String direccion = txtDireccion.getText().trim();
         String ciudad = txtCiudad.getText().trim();
-        String email = txtbuscarnombre.getText().trim();
+        String email = txtEmail.getText().trim();
 
 // Validación de campos vacíos
         if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || celular.isEmpty() || direccion.isEmpty() || ciudad.isEmpty() || email.isEmpty()) {
@@ -395,57 +395,57 @@ public class PanelClientes extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodificarActionPerformed
-       int filaSeleccionada = Tabla.getSelectedRow();
-if (filaSeleccionada == -1) {
-    JOptionPane.showMessageDialog(this, "Selecciona un cliente de la tabla para modificar.");
-    return;
-}
+        int filaSeleccionada = Tabla.getSelectedRow();
+        if (filaSeleccionada == -1) {
+            JOptionPane.showMessageDialog(this, "Selecciona un cliente de la tabla para modificar.");
+            return;
+        }
 
 // Obtener datos del formulario
-String cedula = txtCedula.getText().trim();
-String nombre = txtNombre.getText().trim();
-String apellido = txtApellido.getText().trim();
-String celular = txtCelular.getText().trim();
-String direccion = txtDireccion.getText().trim();
-String ciudad = txtCiudad.getText().trim();
-String email = txtEmail.getText().trim();
+        String cedula = txtCedula.getText().trim();
+        String nombre = txtNombre.getText().trim();
+        String apellido = txtApellido.getText().trim();
+        String celular = txtCelular.getText().trim();
+        String direccion = txtDireccion.getText().trim();
+        String ciudad = txtCiudad.getText().trim();
+        String email = txtEmail.getText().trim();
 
 // Validación de campos
-if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty()
-        || celular.isEmpty() || direccion.isEmpty() || ciudad.isEmpty() || email.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Por favor, completa todos los campos.");
-    return;
-}
+        if (cedula.isEmpty() || nombre.isEmpty() || apellido.isEmpty()
+                || celular.isEmpty() || direccion.isEmpty() || ciudad.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, completa todos los campos.");
+            return;
+        }
 
 // Obtener datos actuales desde la tabla
-String cedulaOriginal = Tabla.getValueAt(filaSeleccionada, 0).toString();
-String nombreOriginal = Tabla.getValueAt(filaSeleccionada, 1).toString();
-String apellidoOriginal = Tabla.getValueAt(filaSeleccionada, 2).toString();
-String celularOriginal = Tabla.getValueAt(filaSeleccionada, 3).toString();
-String direccionOriginal = Tabla.getValueAt(filaSeleccionada, 4).toString();
-String ciudadOriginal = Tabla.getValueAt(filaSeleccionada, 5).toString();
-String emailOriginal = Tabla.getValueAt(filaSeleccionada, 6).toString();
+        String cedulaOriginal = Tabla.getValueAt(filaSeleccionada, 0).toString();
+        String nombreOriginal = Tabla.getValueAt(filaSeleccionada, 1).toString();
+        String apellidoOriginal = Tabla.getValueAt(filaSeleccionada, 2).toString();
+        String celularOriginal = Tabla.getValueAt(filaSeleccionada, 3).toString();
+        String direccionOriginal = Tabla.getValueAt(filaSeleccionada, 4).toString();
+        String ciudadOriginal = Tabla.getValueAt(filaSeleccionada, 5).toString();
+        String emailOriginal = Tabla.getValueAt(filaSeleccionada, 6).toString();
 
 // Verificar si hay cambios
-if (cedula.equals(cedulaOriginal) && nombre.equals(nombreOriginal) && apellido.equals(apellidoOriginal)
-        && celular.equals(celularOriginal) && direccion.equals(direccionOriginal)
-        && ciudad.equals(ciudadOriginal) && email.equals(emailOriginal)) {
-    JOptionPane.showMessageDialog(this, "No ha realizado ningún cambio.");
-    return;
-}
+        if (cedula.equals(cedulaOriginal) && nombre.equals(nombreOriginal) && apellido.equals(apellidoOriginal)
+                && celular.equals(celularOriginal) && direccion.equals(direccionOriginal)
+                && ciudad.equals(ciudadOriginal) && email.equals(emailOriginal)) {
+            JOptionPane.showMessageDialog(this, "No ha realizado ningún cambio.");
+            return;
+        }
 
-try {
-    // Crear objeto actualizado
-    Cliente nuevo = new Cliente(cedula, nombre, apellido, celular, direccion, ciudad, email);
+        try {
+            // Crear objeto actualizado
+            Cliente nuevo = new Cliente(cedula, nombre, apellido, celular, direccion, ciudad, email);
 
-    // Lógica de modificación
-    cCliente.modificar(nuevo, cedulaOriginal);
-    cCliente.guardar(); // guarda cambios en CSV
-    actualizarTabla();  // refresca tabla
-    JOptionPane.showMessageDialog(this, "Cliente modificado con éxito.");
-} catch (Exception ex) {
-    JOptionPane.showMessageDialog(this, "Error al modificar cliente: " + ex.getMessage());
-}
+            // Lógica de modificación
+            cCliente.modificar(nuevo, cedulaOriginal);
+            cCliente.guardar(); // guarda cambios en CSV
+            actualizarTabla();  // refresca tabla
+            JOptionPane.showMessageDialog(this, "Cliente modificado con éxito.");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error al modificar cliente: " + ex.getMessage());
+        }
     }//GEN-LAST:event_btnmodificarActionPerformed
 
     private void TablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TablaMouseClicked

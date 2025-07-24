@@ -24,9 +24,22 @@ import java.nio.file.Paths;
  */
 public class panelFactura extends javax.swing.JPanel {
 
-    /**
-     * Creates new form panelFactura
-     */
+    private boolean existeNumeroFactura(String numFactura) {
+        try (BufferedReader br = new BufferedReader(new FileReader(Paths.get("src", "Data", "dataFacturas.csv").toString()))) {
+            String linea;
+            br.readLine(); // para saltar la cabecera
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos.length > 0 && datos[0].equalsIgnoreCase(numFactura)) {
+                    return true;
+                }
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al validar número de factura: " + e.getMessage());
+        }
+        return false;
+    }
+
     public panelFactura() {
         initComponents();
 
@@ -54,18 +67,18 @@ public class panelFactura extends javax.swing.JPanel {
             jComboBoxClientes.addItem(cliente);
         }
     }
-    
+
     private void cargarCodigosProductosEnComboBox() {
         cProductos controlador = new cProductos();
-    try {
-        controlador.leer(); // Cargar productos del CSV
-        for (int i = 0; i < controlador.Cantidad(); i++) {
-            Productos p = controlador.getProducto(i);
-            jComboBoxCodigos.addItem(p.Codigo); // Agrega solo el código
+        try {
+            controlador.leer(); // Cargar productos del CSV
+            for (int i = 0; i < controlador.Cantidad(); i++) {
+                Productos p = controlador.getProducto(i);
+                jComboBoxCodigos.addItem(p.Codigo); // Agrega solo el código
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al cargar productos: " + e.getMessage());
         }
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Error al cargar productos: " + e.getMessage());
-    }
     }
 
     private void actualizarTotales() {
@@ -122,32 +135,34 @@ public class panelFactura extends javax.swing.JPanel {
         jTextFieldIVA.setText(String.format("%.2f", iva));
         jTextFieldTotalFactura.setText(String.format("%.2f", total));
     }
-private void cargarFacturasEnTabla() {
-    DefaultTableModel modelo = (DefaultTableModel) jTableFacturas.getModel();
-    modelo.setRowCount(0); // Limpia la tabla
 
-    try (BufferedReader br = new BufferedReader(new FileReader(Paths.get("src", "Data", "dataFacturas.csv").toString()))) {
-        String linea;
-        while ((linea = br.readLine()) != null) {
-            String[] datos = linea.split(";");
-            if (datos.length >= 5) {
-                String numeroFactura = datos[0];
-                String cedulaCliente = datos[2];
-                String fecha = datos[3];
-                String total = datos[4];
+    private void cargarFacturasEnTabla() {
+        DefaultTableModel modelo = (DefaultTableModel) jTableFacturas.getModel();
+        modelo.setRowCount(0); // Limpia la tabla
 
-                // Obtener nombre del cliente por cédula
-                cCliente controlador = new cCliente();
-                String nombreCompleto = controlador.obtenerNombreClientePorCedula(cedulaCliente);
-                
-                 // AGREGAR FILA A LA TABLA
-                modelo.addRow(new Object[]{numeroFactura, fecha, nombreCompleto, total});
+        try (BufferedReader br = new BufferedReader(new FileReader(Paths.get("src", "Data", "dataFacturas.csv").toString()))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos.length >= 5) {
+                    String numeroFactura = datos[0];
+                    String cedulaCliente = datos[2];
+                    String fecha = datos[3];
+                    String total = datos[4];
+
+                    // Obtener nombre del cliente por cédula
+                    cCliente controlador = new cCliente();
+                    String nombreCompleto = controlador.obtenerNombreClientePorCedula(cedulaCliente);
+
+                    // AGREGAR FILA A LA TABLA
+                    modelo.addRow(new Object[]{numeroFactura, fecha, nombreCompleto, total});
+                }
             }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al cargar facturas: " + e.getMessage());
         }
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Error al cargar facturas: " + e.getMessage());
     }
-}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -459,7 +474,7 @@ private void cargarFacturasEnTabla() {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(74, Short.MAX_VALUE)
+                        .addContainerGap(86, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonVerDetalle, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButtonLimpiar, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -492,7 +507,7 @@ private void cargarFacturasEnTabla() {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(396, 396, 396)
                                 .addComponent(jLabel14)))
-                        .addGap(0, 437, Short.MAX_VALUE)))
+                        .addGap(0, 456, Short.MAX_VALUE)))
                 .addContainerGap(3, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -583,8 +598,8 @@ private void cargarFacturasEnTabla() {
 
     private void jComboBoxClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxClientesActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     }//GEN-LAST:event_jComboBoxClientesActionPerformed
 
     private void jTextFieldVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldVendedorActionPerformed
@@ -624,8 +639,13 @@ private void cargarFacturasEnTabla() {
     }//GEN-LAST:event_jTextFieldTotalFacturaActionPerformed
 
     private void jButtonAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarProductoActionPerformed
-        // TODO add your handling code here:
         String numFactura = jTextFieldNumFactura.getText().trim();
+
+        if (numFactura.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor ingresa un número de factura primero.");
+            return;
+        }
+
         String codigo = jComboBoxCodigos.getSelectedItem().toString();
         String nombre = jTextFieldNombreProd.getText().trim();
         String precioStr = jTextFieldPrecio.getText().trim();
@@ -669,52 +689,44 @@ private void cargarFacturasEnTabla() {
     }//GEN-LAST:event_jButtonEliminarProductoActionPerformed
 
     private void jButtonGuardarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarFacturaActionPerformed
-        // TODO add your handling code here:
         String numFactura = jTextFieldNumFactura.getText().trim();
-        String fecha = jTextFieldFecha.getText().trim();
-        String totalStr = jTextFieldTotalFactura.getText().trim().replace(",", ".");
-        String clienteSeleccionado = (String) jComboBoxClientes.getSelectedItem();
-        String formaPago = (String) jComboBoxFormaPago.getSelectedItem();
 
-        if (numFactura.isEmpty() || fecha.isEmpty() || clienteSeleccionado == null || formaPago == null || listaDetalle.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, completa todos los campos y agrega al menos un producto.");
+        if (numFactura.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor ingresa un número de factura primero.");
+            return;
+        }
+
+        if (existeNumeroFactura(numFactura)) {
+            JOptionPane.showMessageDialog(this, "Número de factura ya existente. No se puede repetir.");
+            return;
+        }
+
+        String codigo = jComboBoxCodigos.getSelectedItem().toString();
+        String nombre = jTextFieldNombreProd.getText().trim();
+        String precioStr = jTextFieldPrecio.getText().trim();
+        String cantidadStr = jTextFieldCantidad.getText().trim();
+
+        if (codigo.isEmpty() || nombre.isEmpty() || precioStr.isEmpty() || cantidadStr.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Completa todos los campos antes de agregar.");
             return;
         }
 
         try {
-            String cedulaCliente = clienteSeleccionado.split(" - ")[0];
-            double totalFactura = Double.parseDouble(totalStr);
+            int cantidad = Integer.parseInt(cantidadStr);
+            double precio = Double.parseDouble(precioStr);
 
-            // Guarda la cabecera de la factura
-            String rutaFactura = Paths.get("src", "Data", "dataFacturas.csv").toString();
-            FileWriter fw = new FileWriter(rutaFactura, true);
-            fw.write(numFactura + ";" + "0998765432000" + ";" + cedulaCliente + ";" + fecha + ";" + totalFactura + ";" + formaPago + "\n");
-            fw.close();
+            DetalleFactura detalle = new DetalleFactura(numFactura, codigo, nombre, cantidad, precio);
+            listaDetalle.add(detalle);
 
-            // Guarda los detalles de la factura
-            String DetalleFactura = Paths.get("src", "Data", "dataDetalleFactura.csv").toString();
-            FileWriter fwDetalle = new FileWriter(DetalleFactura, true);
-            for (DetalleFactura d : listaDetalle) {
-                fwDetalle.write(numFactura + ";" + d.codigoProducto + ";" + d.nombreProducto + ";" + d.cantidad + ";" + d.precioUnitario + ";" + d.subtotal + "\n");
-            }
-            fwDetalle.close();
+            DefaultTableModel modelo = (DefaultTableModel) jTableDetalleFactura.getModel();
+            Object[] fila = {codigo, nombre, cantidad, precio, detalle.subtotal};
+            modelo.addRow(fila);
 
-            JOptionPane.showMessageDialog(this, "Factura guardada correctamente.");
-
-            // Limpia todo después de guardar
-            ((DefaultTableModel) jTableDetalleFactura.getModel()).setRowCount(0);
-            listaDetalle.clear();
-            actualizarTotales();
             limpiarCamposProducto();
-            jTextFieldNumFactura.setText("");
-            jTextFieldFecha.setText("");
-            jComboBoxClientes.setSelectedIndex(0);
-            jComboBoxFormaPago.setSelectedIndex(0);
-            
-            cargarFacturasEnTabla();
+            actualizarTotales();
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al guardar factura: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Cantidad y Precio deben ser numéricos.");
         }
     }//GEN-LAST:event_jButtonGuardarFacturaActionPerformed
 
@@ -753,36 +765,36 @@ private void cargarFacturasEnTabla() {
     private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
         // TODO add your handling code here:
         // Limpiar tabla de facturas
-    // Limpiar tabla de detalle si quieres
-    DefaultTableModel modeloDetalle = (DefaultTableModel) jTableDetalleFactura.getModel();
-    modeloDetalle.setRowCount(0);
+        // Limpiar tabla de detalle si quieres
+        DefaultTableModel modeloDetalle = (DefaultTableModel) jTableDetalleFactura.getModel();
+        modeloDetalle.setRowCount(0);
 
-    // Limpiar campos de totales
-    jTextFieldSubtotalGeneral.setText("");
-    jTextFieldIVA.setText("");
-    jTextFieldTotalFactura.setText("");
-        
+        // Limpiar campos de totales
+        jTextFieldSubtotalGeneral.setText("");
+        jTextFieldIVA.setText("");
+        jTextFieldTotalFactura.setText("");
+
     }//GEN-LAST:event_jButtonLimpiarActionPerformed
 
     private void jComboBoxCodigosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxCodigosActionPerformed
         // TODO add your handling code here:
         String codigoSeleccionado = (String) jComboBoxCodigos.getSelectedItem();
-    if (codigoSeleccionado != null) {
-        cProductos controlador = new cProductos();
-        try {
-            controlador.leer();
-            for (int i = 0; i < controlador.Cantidad(); i++) {
-                Productos p = controlador.getProducto(i);
-                if (p.Codigo.equalsIgnoreCase(codigoSeleccionado)) {
-                    jTextFieldNombreProd.setText(p.Nombre);
-                    jTextFieldPrecio.setText(String.valueOf(p.Precio));
-                    break;
+        if (codigoSeleccionado != null) {
+            cProductos controlador = new cProductos();
+            try {
+                controlador.leer();
+                for (int i = 0; i < controlador.Cantidad(); i++) {
+                    Productos p = controlador.getProducto(i);
+                    if (p.Codigo.equalsIgnoreCase(codigoSeleccionado)) {
+                        jTextFieldNombreProd.setText(p.Nombre);
+                        jTextFieldPrecio.setText(String.valueOf(p.Precio));
+                        break;
+                    }
                 }
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Error al buscar producto: " + e.getMessage());
             }
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Error al buscar producto: " + e.getMessage());
         }
-    }
     }//GEN-LAST:event_jComboBoxCodigosActionPerformed
 
 

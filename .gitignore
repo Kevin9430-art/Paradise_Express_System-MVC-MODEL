@@ -1,21 +1,20 @@
-/dist/
- === Archivos generados por NetBeans ===
-#nbproject/private/
-#build/
-#dist/
-#*.class
+# === NetBeans ===
+nbproject/private/
+build/
+dist/
+*.class
+*.jar
+*.form
 
-# === Archivos temporales del sistema ===
-3*.log
+# === Sistema ===
+.DS_Store
+Thumbs.db
+*.log
 *.tmp
 *.bak
 *.swp
 *~
 
-# === Configuración de usuario de NetBeans ===
+# === CVS/CSV/Properties si son temporales ===
 *.orig
 config.properties
-
-# === Archivos ocultos de MacOS o Windows ===
-.DS_Store
-Thumbs.db
